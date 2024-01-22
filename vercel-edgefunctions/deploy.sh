@@ -15,4 +15,4 @@ wasm-pack build \
     --out-name sfen2png
 
 cd "$(dirname "$0")"
-vercel --prod
+# vercel --prod
