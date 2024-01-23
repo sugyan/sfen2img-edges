@@ -11,12 +11,12 @@ if ! command -v wasm-pack &> /dev/null; then
     exit 1
 fi
 
-cd "$(dirname "$0")/../sfen2png-wasm"
+cd "$(dirname $(realpath "$0"))/../sfen2png-wasm"
 wasm-pack build \
     --target web \
     --release \
     --out-dir ../vercel-edgefunctions/src/pkg \
     --out-name sfen2png
 
-cd "$(dirname "$0")"
+cd "$(dirname $(realpath "$0"))"
 # vercel --prod

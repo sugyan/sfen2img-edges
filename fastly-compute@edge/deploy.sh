@@ -7,5 +7,5 @@ if ! command -v fastly &> /dev/null; then
     exit 1
 fi
 
-cd "$(dirname "$0")"
+cd "$(dirname $(realpath "$0"))"
 fastly compute publish
