@@ -1,0 +1,6 @@
+name = "sfen2img"
+main = "build/worker/shim.mjs"
+compatibility_date = "2023-06-28"
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
